@@ -4,13 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
     tools:context="com.example.fran.com.msviews.MainActivity">
 
-    <Button android:id="@+id/button1"
+    <EditText
+        android:id="@+id/entrada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/entrada"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/boton0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="sePulsa0"
+        android:tag="0"
+        android:text="0" />
+
+    <Button
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="55dp"
         android:background="@drawable/boton"
-        android:onClick="sePulsa"/>
+        android:onClick="sePulsa" />
+
+    <TextView
+        android:id="@+id/salida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:hint="@string/salida"
+        android:paddingTop="10dp"
+        android:text=""
+        android:textColor="#0000FF" />
 </LinearLayout>
